@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .container {
+    margin: auto;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+  }
+</style>
+<div class="container">
+<h2 th:text="${title}"/>
+  <img th:src="${rich}"/>
+  <img th:src="${broke}"/>
+
+  <hr>
+
+  <a th:href="@{/index}"> Back to Main</a>
+</div>
+</body>
+</html>

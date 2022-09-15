@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .container {
+        margin: auto;
+        width: 50%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+</style>
+<div class="container">
+    <h2>Choose currency</h2>
+    <form action="#" th:action="@{/code}" th:value="${code}" method="POST">
+        <select name="code">
+            <option  th:each="code : ${currencyList}"
+                     th:value="${code}" th:text="${code}"></option>
+        </select>
+        <button type="submit" class="btn btn-primary col-2"> Get Gif for Exchange Rate</button>
+
+
+    </form>
+    <hr>
+
+</div>
+</body>
+</html>
